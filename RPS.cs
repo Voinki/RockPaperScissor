@@ -13,7 +13,7 @@ namespace Rock_Paper_Scissors
             int playerScore = 0;
             int computerScore = 0;
             int draws = 0;
-
+            //TODO: add for loop and ask the player if they want best of 2,3..n 
             while (continuePlaying)
             {
                 if (wrongInput)
@@ -159,31 +159,31 @@ namespace Rock_Paper_Scissors
                 return "scissors";
             }
         }
-        static bool CheckIfPlayerWins(string? playerInput, string computerMove)
+        static bool CheckIfPlayerWins(string playerInput, string computerMove)
         {
-            if ((playerInput == "r" || playerInput == "R" && computerMove == "scissors") ||
-                    (playerInput == "p" || playerInput == "P" && computerMove == "rock") ||
-                    (playerInput == "s" || playerInput == "S" && computerMove == "paper"))
+            if (((playerInput == "R" || playerInput == "r") && (computerMove == "scissors") ||
+                ((playerInput == "P" || playerInput == "p") && (computerMove == "rock")) ||
+                ((playerInput == "S" || playerInput == "s") && (computerMove == "paper"))))
             {
                 return true;
             }
             return false;
         }
-        static bool CheckIfComputerWins(string? playerInput, string computerMove)
+        static bool CheckIfComputerWins(string playerInput, string computerMove)
         {
-            if ((playerInput == "r" || playerInput == "R" && computerMove == "paper") ||
-                            (playerInput == "p" || playerInput == "P" && computerMove == "scissors") ||
-                            (playerInput == "s" || playerInput == "S" && computerMove == "rock"))
+            if (((playerInput == "R" || playerInput == "r") && (computerMove == "paper") ||
+                ((playerInput == "P" || playerInput == "p") && (computerMove == "scissors")) ||
+                ((playerInput == "S" || playerInput == "s") && (computerMove == "rock"))))
             {
                 return true;
             }
             return false;
         }
-        static bool CheckForDraw(string? playerInput, string computerMove)
+        static bool CheckForDraw(string playerInput, string computerMove)
         {
-            if ((playerInput == "r" || playerInput == "R" && computerMove == "rock") ||
-                            (playerInput == "p" || playerInput == "P" && computerMove == "paper") ||
-                            (playerInput == "s" || playerInput == "S" && computerMove == "scissors"))
+            if (((playerInput == "R" || playerInput == "r") && (computerMove == "rock") ||
+                ((playerInput == "P" || playerInput == "p") && (computerMove == "paper")) ||
+                ((playerInput == "s" || playerInput == "s") && (computerMove == "scissors"))))
             {
                 return true;
             }
